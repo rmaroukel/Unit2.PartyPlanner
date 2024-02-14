@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/themes/light.css" />
+<script defer type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.13.1/cdn/shoelace-autoloader.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body>
+    <section id="header">
+        <sl-card class="card-mainheader">
+            <h2>Events List</h2>
+        </sl-card>
+    </section>
+
+    <section id="events"></section>
+
+    <section id="add-event-form">
+        <sl-card class="card-form">
+            <h2 style="text-align: center">Add New Event</h2>
+            <form id="form">
+                    <input name="name" style="width: 100%" placeholder="Event Name:"></input>
+                    <br>
+                    <input name="description" style="width: 100%" placeholder="Event Description:"></input>
+                    <br>
+                    <input type="date" name="date" style="width: 100%" placeholder="Event Date:"></input>
+                    <br>
+                    <input name="location" style="width: 100%" placeholder="Event Location:"></input>
+                    <br>
+                    <button name="submit" style="width: 100%">Submit</button>
+            </form>
+        </sl-card>
+    </section>
+    
+
+</body>
+
+<style>
+
+    *{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .card-mainheader {
+      text-align: center;
+      width: 100%;
+    }
+
+    #events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2em;
+    }
+
+    .card-header {
+    min-width: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    }
+
+    .card-header [slot='footer'] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+    .card-form {
+    margin-top: 40px;
+    width: 100%;
+    }
+
+  </style>
+</html>
